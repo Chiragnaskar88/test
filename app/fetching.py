@@ -50,7 +50,7 @@ def fetchData(Startyear,Endyear):
 def rawtopostgres(data,rawtable):
     df = pd.DataFrame(data)
     df['time'] = pd.to_datetime(df['time'],unit='ms')
-    engine = create_engine('postgresql://myuser:mypassword@localhost:5433/earthquake')
+    engine = create_engine('postgresql+psycopg2://myuser:mypassword@localhost:5433/earthquake')
     df.to_sql(name=rawtable,con=engine,index=False, if_exists='append')
 print("Data fetching Started")   
 data  = fetchData(2024,2025)
