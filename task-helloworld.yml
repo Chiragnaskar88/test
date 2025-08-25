@@ -8,4 +8,4 @@ image_resource:
 
 run:
   path: echo
-  args: ["hello Chirag"]
+  args: ["hello Chirag Naskar"]
