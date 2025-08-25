@@ -52,7 +52,7 @@ def rawtopostgres(data,rawtable):
     df['time'] = pd.to_datetime(df['time'],unit='ms')
     engine = create_engine('postgresql+psycopg2://myuser:mypassword@localhost:5433/earthquake', echo=False)
     df.to_sql(name=rawtable,con=engine,index=False, if_exists='append')
-    
+print("Data fetching Started")   
 data  = fetchData(2024,2025)
 table_name = "concourse_RawTable"
 print("data fetching done")
