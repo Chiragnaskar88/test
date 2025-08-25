@@ -54,5 +54,5 @@ def rawtopostgres(data,rawtable):
     df.to_sql(name=rawtable,con=engine,index=False, if_exists='append')
     
 data  = fetchData(2024,2025)
-table_name = "conRawTable"
-rawtopostgres(data,table_name)
+# table_name = "conRawTable"
+# rawtopostgres(data,table_name)
