@@ -13,6 +13,5 @@ def validate_data():
     df_dtypes = df.dtypes
     
     print(f"Length of the data after fetching is \n{df_len}")
-    print(f"Schema of the data is : \n{df_info}")
     print(f"Datatype of the Column in the data \n{df_dtypes}")
 validate_data()
