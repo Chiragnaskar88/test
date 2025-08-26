@@ -54,7 +54,7 @@ def rawtopostgres(data,rawtable):
     df.to_sql(name=rawtable,con=engine,index=False, if_exists='append')
 print("Data fetching Started")   
 data  = fetchData(2024,2025)
-table_name = "concourse_RawTable"
+table_name = "concourse_rawtable"
 print("data fetching done")
 print("darta storing to postgres")
 rawtopostgres(data,table_name)

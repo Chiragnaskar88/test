@@ -5,7 +5,7 @@ def validate_data():
 
 
     engine = create_engine('postgresql+psycopg2://concourse_user:concourse_pass@172.21.0.2:5432/concourse')
-    query = "select * from concourse_RawTable"
+    query = "select * from concourse_rawtable"
     df = pd.read_sql_query(query, con = engine)
     
     df_len = len(df)
